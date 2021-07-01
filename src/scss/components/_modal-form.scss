@@ -1,0 +1,148 @@
+.modal-form {
+  position: relative;
+  padding-top: 40px;
+  padding-right: 30px;
+  padding-bottom: 45px;
+  padding-left: 30px;
+  border: 2px solid #ded255;
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0 6px 20px rgba(222, 210, 85, 0.1);
+
+  @include max-width(687px);
+
+  @media (max-width: 575px) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  &_feedback {
+    margin-left: auto;
+
+    @media (max-width: 991px) {
+      margin-right: auto;
+    }
+
+    &::before {
+      position: absolute;
+      top: 120px;
+      left: -878px;
+      content: url('/src/img/book.png');
+
+      @media (max-width: 991px) {
+        content: none;
+      }
+    }
+  }
+
+  &_catalog {
+    margin-right: auto;
+
+    @media (max-width: 991px) {
+      margin-left: auto;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: -746px;
+      content: url('/src/img/tablet.png');
+
+      @media (max-width: 1450px) {
+        right: -700px;
+      }
+
+      @media (max-width: 991px) {
+        content: none;
+      }
+    }
+  }
+
+  &_modal {
+    width: 98%;
+  }
+}
+
+.modal-form__title {
+  margin-bottom: 39px;
+  color: #4e4d4d;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: center;
+
+  @media (max-width: 575px) {
+    font-size: 22px;
+    line-height: 29px;
+  }
+}
+
+.modal-form__input-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 17px;
+}
+
+.modal-form__input-box {
+  @include max-width(448px);
+
+  margin-bottom: 20px;
+
+  &:nth-child(3) {
+    margin-bottom: 32px;
+  }
+}
+
+.modal-form__input-label {
+  @include main;
+
+  position: relative;
+  left: 5px;
+  margin-bottom: 5px;
+  color: #4e4d4d;
+}
+
+.modal-form__input {
+  width: 100%;
+  height: 80px;
+  padding-right: 15px;
+  padding-left: 32px;
+  border: 1px solid #4e4d4d;
+  background: #fff;
+  border-radius: 60px;
+  font-size: 22px;
+  opacity: 0.5;
+
+  &:focus,
+  &:hover {
+    opacity: 1;
+    outline: none;
+  }
+}
+
+.modal-form__policy-text {
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  color: #c6c6c6;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  text-align: center;
+
+  @include max-width(484px);
+
+  button {
+    @include reset-btn;
+
+    color: #c6c6c6;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+}

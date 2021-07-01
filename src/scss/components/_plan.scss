@@ -1,0 +1,10 @@
+.plan {
+  min-height: 470px;
+  background-image: url('/src/img/bgs/income-bg.png');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+
+  @media (max-width: 1200px) {
+    padding-bottom: 40px;
+  }
+}

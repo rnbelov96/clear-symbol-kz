@@ -1,0 +1,134 @@
+.owner {
+  padding-top: 36px;
+  padding-bottom: 66px;
+
+  @media (max-width: 767px) {
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+}
+
+.owner__title {
+  @include title;
+
+  margin-bottom: 35px;
+  color: #105e3b;
+
+  span {
+    color: #95c23f;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 47px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 27px;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+
+.owner__box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 32px;
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+
+  @media (max-width: 991px) {
+    justify-content: center;
+  }
+
+  @media (max-width: 575px) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 296px;
+    left: -220px;
+    content: url('/src/img/owner-grass-left.png');
+  }
+
+  &::after {
+    position: absolute;
+    top: 450px;
+    right: -222px;
+    content: url('/src/img/owner-grass-right.png');
+  }
+}
+
+.owner__left-side {
+  width: 40%;
+
+  @media (max-width: 991px) {
+    @include max-width(586px);
+
+    margin-bottom: 30px;
+  }
+}
+
+.owner__img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.owner__name {
+  margin-bottom: 0;
+
+  @include subtitle;
+
+  color: #4e4d4d;
+}
+
+.owner__caption {
+  margin-bottom: 0;
+  color: #4e4d4d;
+
+  @include main-bold;
+
+  @media (max-width: 575px) {
+    font-size: 17px;
+  }
+}
+
+.owner__right-side {
+  width: 57%;
+
+  @media (max-width: 991px) {
+    width: 100%;
+  }
+}
+
+.owner__text-title {
+  margin-bottom: 14px;
+
+  @include subtitle;
+
+  color: #4e4d4d;
+
+  @media (max-width: 575px) {
+    font-size: 21px;
+    line-height: 30px;
+  }
+}
+
+.owner__text {
+  color: #4e4d4d;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 32px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 15px;
+    line-height: 28px;
+  }
+}
